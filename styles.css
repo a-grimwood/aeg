@@ -1,76 +1,103 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f5f7fa;
-  color: #333;
+  font-family: Candara;
+  background: #f4f6f9;
 }
 
-header {
+/* Navbar */
+.navbar {
   background: #1f2937;
   color: white;
-  padding: 20px;
-  position: sticky;
-  top: 0;
-}
-
-nav a {
-  color: white;
-  margin-right: 15px;
-  text-decoration: none;
-}
-
-section {
-  padding: 60px 10%;
-}
-
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
-}
-
-/* Profile */
-.profile-container {
+  padding: 15px 10%;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
   align-items: center;
 }
 
-.profile-container img {
-  width: 150px;
-  border-radius: 50%;
-}
-
-/* Skills */
-.skills-grid {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.skill {
-  background: #3b82f6;
+.navbar a {
   color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
+  margin-left: 20px;
+  text-decoration: none;
 }
 
-/* Experience */
-.job {
-  margin-bottom: 40px;
-}
-
-.gallery {
+/* Hero Section */
+.hero {
+  height: 90vh;
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  text-align: center;
+
+  /* Full background image */
+  background-image: url('solarfarmcoverpage.jpg'); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-.gallery img {
-  width: 150px;
+/* Translucent box behind content */
+.hero-content {
+  background-color: #322c54; /* semi-transparent cream */
+  padding: 50px 60px;
+  border-radius: 15px;
+  display: inline-block; /* box shrinks to content */
+}
+
+/* Hero text */
+.hero-content h1 {
+  margin: 0 0 20px;
+  font-size: 50px;
+  color: #f1efea; /* dark text for readability */
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #f9f9f5;
+}
+
+/* Buttons inside hero-content */
+.btn {
+  margin: 10px;
+  padding: 12px 25px;
+  background: rgb(253, 253, 251);
+  color: rgb(1, 0, 0);
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+/* Layout */
+.container {
+  padding: 50px 10%;
+}
+
+/* Cards (Bootstrap-style) */
+.card {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  margin-bottom: 20px;
   border-radius: 10px;
-  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(23, 8, 8, 0.1);
 }
 
-.gallery img:hover {
-  transform: scale(1.1);
+/* Collapsible header styling */
+.collapsible-header {
+  cursor: pointer;
+  background-color: rgb(31, 24, 95); /* match your button color */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+/* Hidden content */
+.collapsible-content {
+  max-height: 0; /* start collapsed */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: rgba(189, 190, 206, 0.7); /* translucent box like hero */
+  padding: 0 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
